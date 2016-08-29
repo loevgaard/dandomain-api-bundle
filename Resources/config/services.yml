@@ -1,0 +1,6 @@
+services:
+    guzzle.client:
+        class: GuzzleHttp\Client
+    dandomain.api:
+        class: Dandomain\Api\Api
+        arguments: [%dandomain_api.host%, %dandomain_api.api_key%, "@guzzle.client"]
